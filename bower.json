@@ -1,0 +1,22 @@
+{
+  "name": "nightwatch-selectize",
+  "authors": [
+    "Antonin Messinger <antonin.messinger@people-doc.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "selectize": "^0.12.1",
+    "jquery": "^2.2.2"
+  }
+}

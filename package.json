@@ -1,0 +1,20 @@
+{
+  "name": "nightwatch-selectize",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "http-server": "^0.9.0",
+    "nightwatch": "^0.8.18",
+    "selenium-standalone": "^5.1.0"
+  },
+  "scripts": {
+    "postinstall": "selenium-standalone install --drivers.chrome.version=2.21 --drivers.chrome.baseURL=https://chromedriver.storage.googleapis.com",
+    "test": "nightwatch",
+    "selenium": "selenium-standalone start",
+    "serve": "http-server ./"
+  },
+  "author": "",
+  "license": "ISC"
+}

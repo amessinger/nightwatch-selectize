@@ -1,0 +1,49 @@
+{
+  "custom_commands_path": "./commands/",
+  "src_folders": ["./tests"],
+  "selenium": {
+    "start_process" : false,
+    "log_path" : ""
+  },
+  "test_settings": {
+    "default": {
+      "launch_url" : "http://hub.browserstack.com",
+      "selenium_port"  : 80,
+      "selenium_host"  : "hub.browserstack.com",
+      "silent": true,
+      "screenshots" : {
+        "enabled" : false,
+        "path" : ""
+      },
+      "desiredCapabilities": {
+        "resolution" : "1024x768",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true,
+        "browserstack.user": "",
+        "browserstack.key": ""
+      }
+    },
+    "ie9" : {
+      "desiredCapabilities": {
+        "browser" : "IE",
+        "browser_version" : "9.0",
+        "os" : "Windows",
+        "os_version" : "7"
+      }
+    },
+    "firefox" : {
+      "desiredCapabilities": {
+        "browser" : "firefox",
+        "os" : "Windows",
+        "os_version" : "7"
+      }
+    },
+    "chrome" : {
+      "desiredCapabilities": {
+        "browser" : "chrome",
+        "os" : "Windows",
+        "os_version" : "7"
+      }
+    }
+  }
+}
