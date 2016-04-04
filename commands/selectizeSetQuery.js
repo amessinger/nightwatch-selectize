@@ -4,11 +4,12 @@ exports.command = function(selector, value, callback) {
 
   function execute(selector, value, done) {
     var selectize = $(selector)[0].selectize;
-
+    var keyUpEvent = $.Event("keyup");
+    var keyDownEvent = $.Event("keydown");
     selectize.clear();
     selectize.$control_input
       .val(value)
-      .focus();
+      .keydown();
 
     selectize.on('load', function() {
       done(true);
