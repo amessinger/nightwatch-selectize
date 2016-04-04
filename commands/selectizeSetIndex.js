@@ -3,9 +3,11 @@ exports.command = function(selector, index, callback) {
   var executeParams = [selector, index];
 
   function execute(selector, index) {
-    var $option = $('[data-selectable]:eq(' + index + ')', selector);
-    var value = $option.data('value');
-    $(selector)[0].selectize.setValue(value);
+    var selectize = $(selector)[0].selectize;
+    var $option = $('[data-selectable]:eq(' + index + ')', selectize.$dropdown);
+
+    selectize.setValue($option.data('value'));
+
     return true;
   }
 

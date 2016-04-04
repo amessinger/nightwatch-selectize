@@ -1,18 +1,19 @@
 var stepTime = 2000;
 var endTime = 5000;
+var inputSelector = '[name="select1"]';
 
 module.exports = {
   'Demo' : function (browser) {
     browser
-      .url('https://SOME_PUBLICLY_ACCESSIBLE_URL/demo.html')
+      .url('http://SOME_URL/demo.html')
       .pause(stepTime)
-      .selectizeOpen('.selectize')
+      .selectizeOpen(inputSelector)
       .pause(stepTime)
-      .selectizeSetValue('.selectize', '1')
+      .selectizeSetValue(inputSelector, '1')
       .pause(stepTime)
-      .selectizeSetQuery('.selectize', 'Tw')
+      .selectizeSetQuery(inputSelector, 'Tw')
       .pause(stepTime)
-      .selectizeSetIndex('.selectize', 0)
+      .selectizeSetIndex(inputSelector, 0)
       .pause(endTime)
       .end();
   }

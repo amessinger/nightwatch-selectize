@@ -3,12 +3,14 @@ exports.command = function(selector, value, callback) {
   var executeParams = [selector, value];
 
   function execute(selector, value, done) {
-    $(selector)[0].selectize.clear();
-    $('.selectize-input input', selector)
+    var selectize = $(selector)[0].selectize;
+
+    selectize.clear();
+    selectize.$control_input
       .val(value)
       .focus();
 
-    $(selector)[0].selectize.on('load', function() {
+    selectize.on('load', function() {
       done(true);
     });
   }
